@@ -25,7 +25,7 @@ def Proccess_Folder_Files(content,Folder_Structure,Full):
         if Real:
             Header = content[Pointer:Pointer+4]
             Header = struct.unpack('I', Header)[0]
-            if Header < 0xFF and Header > 0x00 and Size > 0:
+            if Header < 0x26F and Header > 0x00 and Size > 0:
                 end = False
                 Folder_Data = [[Number_Files,Pointer,Size]]
                 Folder_After = []
@@ -86,7 +86,7 @@ def Main(name):
         content = file.read()
     Header = content[:4]
     Header = struct.unpack('I', Header)[0]
-    if Header < 0xFF and Header > 0x00:
+    if Header < 0x26F and Header > 0x00:
         File_After,Full = Split_Folder(content,0,[],[])
         File_Structure.append(File_After)
         File_Structure, end,Full = Proccess_Folder_Files(content,File_Structure,Full)
