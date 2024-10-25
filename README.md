@@ -10,21 +10,21 @@ Uses the libraries os, struct, and pickle. Packer also uses the library math.
 ## How it works
 
 **ExtractorV3.py**
-- Place the raw binary file in the same folder as the script. Run ExtractorV3.py and write the file's name (with the extension). It will split the original file into folders, g1m, g1t, g2a, and other binary files.
+- Place the raw binary file (Turtle Insect LINKDATA browser's .unpack file) in the same folder as the script. Run ExtractorV3.py and write the file's name (with the extension). It will split the original file into folders, g1m, g1t, g2a, and other binary files.
 - Some files will look weird/empty. That's how the file is formatted. They probably are important so don't remove them. The folder-> File extraction is an aproximation, but it's probably more complicated than that, involving various pointers to the same data through different "folder" paths.
 - A "Struct" file is generated. This ended up not being important but don't delete it. 
 
 **PackerV3.py**
-- Run PackerV3.py and write the original binary file's name (with the extension). It will repack the contents of the extracted folder back into the original file with the ".edit" extension.
+- Run PackerV3.py and write the original .unpack file's name (with the extension). It will repack the contents of the extracted folder back into the original file with the ".edit" extension.
 - Do not rename the folders or the files, the numbers are ordered.
   
 ### Outdated, works only for g1m-g1t pairs
   
 **Extractor.py**
-- Place the raw binary file in the same folder as the script. Run Extractor.py and write the file's name (with the extension). It will split the original file into its g1t and g1m files.
+- Place the raw binary file (Turtle Insect LINKDATA browser's .unpack file) in the same folder as the script. Run Extractor.py and write the file's name (with the extension). It will split the original file into its g1t and g1m files.
 
 **Packer.py**
-- Place the g1t and g1m files in the same folder as the script. Run Packer.py and write the original binary file's name (with the extension). It will pack the 2 files back into a single file with the ".edit" extension.
+- Place the g1t and g1m files in the same folder as the script. Run Packer.py and write the original .unpack file's name (with the extension). It will pack the 2 files back into a single file with the ".edit" extension.
 
 ## How to extract and inject the binary files
 
